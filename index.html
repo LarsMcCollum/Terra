@@ -51,34 +51,6 @@
       margin: 15px 0;
     }
 
-    /* Projects table */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background-color: #923a3a;
-    }
-
-    th, td {
-      border: 1px solid #a832ba;
-      padding: 12px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #a832ba;
-      color: white;
-    }
-
-    tr:nth-child(even) {
-      background-color: #951b1b;
-    }
-
-    /* Highlight table rows when hovering */
-    tr:hover {
-      background-color: #403047;
-    }
-
     /* Small-screen support */
     @media (max-width: 600px) {
       body {
@@ -149,4 +121,26 @@
     </tr>
   </table>
 </body>
+/* Different red shade for each column */
+th:nth-child(1),
+td:nth-child(1) {
+  background-color: #7f1d1d;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  background-color: #991b1b;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  background-color: #b91c1c;
+}
+
+/* Highlight individual cells when hovering */
+th:hover,
+td:hover {
+  background-color: #403047;
+}
+
 </html>
