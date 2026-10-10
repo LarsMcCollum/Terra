@@ -1,90 +1,196 @@
-<style>
-  .project-box img {
-    width: 100%;
-    max-height: 120px;
-    object-fit: contain;
-    margin-bottom: 10px;
-    filter: drop-shadow(0 0 4px #000);
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="project-grid">
+  <title>Hack Club Project Reference</title>
 
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/terra/logo.png">
-    <h2>Terra</h2>
-    <p>You program and then water crops.</p>
-    <p><strong>Reward:</strong> A FRAMEWORKS COMPUTER!!!!</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Carbon fiber background */
+    body {
+      background-color: #000;
+      background-image: 
+        radial-gradient(#111 2px, transparent 2px),
+        radial-gradient(#111 2px, transparent 2px);
+      background-size: 10px 10px;
+      background-position: 0 0, 5px 5px;
+      background-attachment: fixed;
+      
+      color: #ffffff;
+      font-family: 'Orbitron', sans-serif;
+      margin: 30px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 38px;
+      color: #b686db;
+    }
+
+    .welcome {
+      color: #5a189a;
+    }
+
+    .colorful {
+      background-color: rgb(168, 50, 186);
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    /* Project grid container */
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    /* Individual project box */
+    .project-box {
+      background-color: #5a189a;
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      flex: 1 1 calc(33.333% - 20px);
+      box-shadow: 0 4px 10px #00000055;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: center;
+    }
+
+    /* Hover effect */
+    .project-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px #000000aa;
+    }
+
+    .project-box h2 {
+      margin-top: 10px;
+      font-size: 22px;
+      color: #c77dff;
+    }
+
+    /* Logo styling */
+    .project-box img {
+      width: 100%;
+      max-height: 120px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 4px #000);
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 800px) {
+      .project-box {
+        flex: 1 1 calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .project-box {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="welcome">HACK LIVE</h1>
+
+  <p>
+    Hi everyone! This is my first programming project.
+    I have never coded before. If I mess up badly...
+    I'm sorry!
+  </p>
+
+  <h1 class="colorful">By -Lars</h1>
+
+  <h1><a href="https://hackclub.com/programs" target="_blank" style="color: #5a189a;">Hack Club Projects</a></h1>
+
+  <div class="project-grid">
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/terra/logo.png">
+      <h2>Terra</h2>
+      <p>You program and then water crops.</p>
+      <p><strong>Reward:</strong> A FRAMEWORKS COMPUTER!!!!</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/atlantis/logo.png">
+      <h2>Atlantis</h2>
+      <p>CAD and log hours.</p>
+      <p><strong>Reward:</strong> 3D printers, filament, sleep deprivation.</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/crescent/logo.png">
+      <h2>Crescent</h2>
+      <p>Pick a card, any card.</p>
+      <p><strong>Reward:</strong> The Mac is SOOO much.</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/forge/logo.png">
+      <h2>Forge</h2>
+      <p>CAD stuff. Oorg happy.</p>
+      <p><strong>Reward:</strong> Steam games, domains, ENERGY DRINKS, and more.</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/thirdspace/logo.png">
+      <h2>Third Space</h2>
+      <p>Work with friends.</p>
+      <p><strong>Reward:</strong> Money for computer setup.</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/playground/logo.png">
+      <h2>Playground</h2>
+      <p>Make a friend for your computer.</p>
+      <p><strong>Reward:</strong> Get Hack Club merchandise!</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/stardance/logo.png">
+      <h2>Stardance</h2>
+      <p>CAD or program anything.</p>
+      <p><strong>Reward:</strong> As endless as space itself.</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/halflife/logo.png">
+      <h2>Half Life</h2>
+      <p>Learn CAD/Electronics.</p>
+      <p><strong>Reward:</strong> Get a free 3d printer.</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/fabricate/logo.png">
+      <h2>Fabricate</h2>
+      <p>Make a project in CAD</p>
+      <p><strong>Reward:</strong> Materials and money to pay for it.</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/hackcraft/logo.png">
+      <h2>HACKCRAFT</h2>
+      <p>Make a Minecraft mod</p>
+      <p><strong>Reward:</strong> Win a server to host it.</p>
+    </div>
+
+    <div class="project-box">
+      <img src="https://assets.hackclub.com/vibes/logo.png">
+      <h2>Vibes</h2>
+      <p>Make a website (Like me)</p>
+      <p><strong>Reward:</strong> 🔥PIZZA PARTY🔥</p>
+    </div>
+
   </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/atlantis/logo.png">
-    <h2>Atlantis</h2>
-    <p>CAD and log hours.</p>
-    <p><strong>Reward:</strong> 3D printers, filament, sleep deprivation.</p>
-  </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/crescent/logo.png">
-    <h2>Crescent</h2>
-    <p>Pick a card, any card.</p>
-    <p><strong>Reward:</strong> The Mac is SOOO much.</p>
-  </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/forge/logo.png">
-    <h2>Forge</h2>
-    <p>CAD stuff. Oorg happy.</p>
-    <p><strong>Reward:</strong> Steam games, domains, ENERGY DRINKS, and more.</p>
-  </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/thirdspace/logo.png">
-    <h2>Third Space</h2>
-    <p>Work with friends.</p>
-    <p><strong>Reward:</strong> Money for computer setup.</p>
-  </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/playground/logo.png">
-    <h2>Playground</h2>
-    <p>Make a friend for your computer.</p>
-    <p><strong>Reward:</strong> Get Hack Club merchandise!</p>
-  </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/stardance/logo.png">
-    <h2>Stardance</h2>
-    <p>CAD or program anything.</p>
-    <p><strong>Reward:</strong> As endless as space itself.</p>
-  </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/halflife/logo.png">
-    <h2>Half Life</h2>
-    <p>Learn CAD/Electronics.</p>
-    <p><strong>Reward:</strong> Get a free 3d printer.</p>
-  </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/fabricate/logo.png">
-    <h2>Fabricate</h2>
-    <p>Make a project in CAD</p>
-    <p><strong>Reward:</strong> Materials and money to pay for it.</p>
-  </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/hackcraft/logo.png">
-    <h2>HACKCRAFT</h2>
-    <p>Make a Minecraft mod</p>
-    <p><strong>Reward:</strong> Win a server to host it.</p>
-  </div>
-
-  <div class="project-box">
-    <img src="https://assets.hackclub.com/vibes/logo.png">
-    <h2>Vibes</h2>
-    <p>Make a website (Like me)</p>
-    <p><strong>Reward:</strong> 🔥PIZZA PARTY🔥</p>
-  </div>
-
-</div>
+</body>
+</html>
