@@ -84,10 +84,8 @@
       filter: drop-shadow(0 0 4px #000);
     }
 
-    /* Color picker + button */
     #colorPicker {
-      margin-bottom: 20px;
-      padding: 10px;
+      padding: 8px;
       border-radius: 8px;
       border: none;
       cursor: pointer;
@@ -126,11 +124,20 @@
 
 <body>
 
-  <!-- ⭐ COLOR PICKER + APPLY BUTTON -->
-  <input type="color" id="colorPicker" value="#5a189a">
-  <button id="applyColor">Apply Color</button>
+  <!-- ⭐ TOP BAR WITH TITLE + COLOR PICKER ON RIGHT -->
+  <div style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  ">
+    <h1 class="welcome" style="margin: 0;">HACK LIFE 💻</h1>
 
-  <h1 class="welcome">HACK LIFE 💻</h1>
+    <div>
+      <input type="color" id="colorPicker" value="#5a189a">
+      <button id="applyColor">Apply Color</button>
+    </div>
+  </div>
 
   <p>
     Hi everyone! This is my first programming project.
@@ -233,7 +240,6 @@
 
       document.documentElement.style.setProperty('--main-color', newColor);
 
-      // auto-generate a lighter accent color
       const accent = newColor + "99";
       document.documentElement.style.setProperty('--accent-color', accent);
     };
