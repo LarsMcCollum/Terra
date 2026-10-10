@@ -1,12 +1,32 @@
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cool Website Practice</title>
+  <title>A VERY cool practice thingy!</title>
 </head>
 <body>
   <h1>Welcome to HTML</h1>
-  <p>Hi everyone!</p>
+  <p>Hi everyone! This is my first programming project EVER. I am a beginner who has never coded before. If I mess up badly, uh... I'm sorry!</p>
 </body>
+<img src="c:\Users\larsm\Downloads\drones-firefighting-small.jpg" alt="Awesome Helicopter Image">
+<h1 style="background-color:rgb(168, 50, 186);">So COLORFUL!!!</h1>
+<table>
+  <tr>
+    <th>Hack Club projects</th>
+    <th>What they do</th>
+    <th>Cool rewards</th>
+  </tr>
+  <tr>
+    <td>Terra</td>
+    <td>You program and then water crops</td>
+    <td>A FRAMEWORKS COMPUTADORA!!!!</td>
+  </tr>
+  <tr>
+    <td>Atlantis</td>
+    <td>CAD and log hours</td>
+    <td>3d printers, filament, sleep deprivation</td>
+  </tr>
+</table>
 </html>
