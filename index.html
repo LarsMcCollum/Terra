@@ -78,11 +78,26 @@
       filter: drop-shadow(0 0 4px #000);
     }
 
+    /* Hide the real color picker */
     #colorPicker {
-      padding: 8px;
-      border-radius: 8px;
-      border: none;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+
+    /* Photo button */
+    #colorPhoto {
+      width: 50px;
+      height: 50px;
       cursor: pointer;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    #colorPhoto:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px var(--accent-color);
     }
 
     #applyColor {
@@ -118,7 +133,7 @@
 
 <body>
 
-  <!-- ⭐ TOP BAR WITH TITLE + COLOR PICKER ON RIGHT -->
+  <!-- ⭐ TOP BAR WITH TITLE + PHOTO COLOR PICKER -->
   <div style="
     display: flex;
     justify-content: space-between;
@@ -127,8 +142,17 @@
   ">
     <h1 class="welcome" style="margin: 0;">HACK LIFE 💻</h1>
 
-    <div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+
+      <!-- Hidden color picker -->
       <input type="color" id="colorPicker" value="#996C7F">
+
+      <!-- Photo that triggers the color picker -->
+      <img 
+        src="https://cdn.britannica.com/62/234462-050-7D5808C6/color-wheels-RYB-RGB.jpg"
+        id="colorPhoto"
+      >
+
       <button id="applyColor">Apply Color</button>
     </div>
   </div>
@@ -214,11 +238,16 @@
 
   </div>
 
-  <!-- ⭐ JAVASCRIPT FOR COLOR PICKER -->
+  <!-- ⭐ JAVASCRIPT FOR PHOTO COLOR PICKER -->
   <script>
     const picker = document.getElementById('colorPicker');
     const button = document.getElementById('applyColor');
+    const photo = document.getElementById('colorPhoto');
 
+    // Clicking the photo opens the hidden color picker
+    photo.onclick = () => picker.click();
+
+    // Apply the chosen color
     button.onclick = () => {
       const newColor = picker.value;
 
