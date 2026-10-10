@@ -11,8 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
+    /* Carbon fiber background */
     body {
-      background-color: #000000;
+      background-color: #000;
+      background-image: 
+        radial-gradient(#111 1px, transparent 1px),
+        radial-gradient(#111 1px, transparent 1px);
+      background-size: 10px 10px;
+      background-position: 0 0, 5px 5px;
+      background-attachment: fixed; /* stays still */
+      
       color: #ffffff;
       font-family: 'Orbitron', sans-serif;
       margin: 30px;
@@ -50,7 +58,14 @@
       padding: 20px;
       border-radius: 12px;
       flex: 1 1 calc(33.333% - 20px); /* 3 per row */
-      box-shadow: 0 4px 10px #00000022;
+      box-shadow: 0 4px 10px #00000055;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    /* Hover effect */
+    .project-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px #000000aa;
     }
 
     .project-box h2 {
@@ -117,6 +132,13 @@
       <h2>Third Space</h2>
       <p>Work with friends.</p>
       <p><strong>Reward:</strong> Money money money money money. For computer.</p>
+    </div>
+
+    <!-- Add more boxes easily -->
+    <div class="project-box">
+      <h2>New Project</h2>
+      <p>Description goes here.</p>
+      <p><strong>Reward:</strong> Whatever you want.</p>
     </div>
 
   </div>
