@@ -47,6 +47,109 @@
       border-radius: 8px;
     }
 
+    .coding-showcase {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+      margin: 35px 0;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.02);
+      box-shadow: 0 0 20px rgba(153, 108, 127, 0.18);
+    }
+
+    .coding-card {
+      background: #0b0b12;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .code-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #12131b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 14px 18px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.red { background: #ff5f57; }
+    .dot.yellow { background: #ffbd2e; }
+    .dot.green { background: #28c840; }
+
+    .code-block {
+      margin: 0;
+      padding: 20px 22px 24px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #e8ebff;
+      background: linear-gradient(180deg, #0b0b12 0%, #12131d 100%);
+      font-family: Consolas, 'Courier New', monospace;
+      white-space: pre-wrap;
+    }
+
+    .code-keyword {
+      color: #ff7eb6;
+    }
+
+    .code-var { color: #7dd3fc; }
+    .code-string { color: #a3e635; }
+    .code-number { color: #fbbf24; }
+
+    .coding-text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--main-color);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .coding-text h2 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .coding-text p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .coding-list {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .coding-list li {
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(153, 108, 127, 0.12);
+      border: 1px solid rgba(153, 108, 127, 0.28);
+      color: white;
+    }
+
     .project-grid {
       display: flex;
       flex-wrap: wrap;
@@ -118,6 +221,10 @@
     }
 
     @media (max-width: 800px) {
+      .coding-showcase {
+        grid-template-columns: 1fr;
+      }
+
       .project-box {
         flex: 1 1 calc(50% - 20px);
       }
@@ -162,6 +269,38 @@
     I have never coded before. If I mess up badly...
     I'm sorry!
   </p>
+
+  <section class="coding-showcase">
+    <div class="coding-card">
+      <div class="code-toolbar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <pre class="code-block"><code><span class="code-keyword">const</span> <span class="code-var">project</span> = {
+  <span class="code-var">name</span>: <span class="code-string">"Terra Build"</span>,
+  <span class="code-var">goal</span>: <span class="code-string">"Create something cool"</span>,
+  <span class="code-var">status</span>: <span class="code-string">"In progress"</span>,
+  <span class="code-var">energy</span>: <span class="code-number">100</span>,
+  <span class="code-var">inspiration</span>: <span class="code-string">"Hack Club"</span>
+};
+
+<span class="code-keyword">function</span> <span class="code-var">shipIdea</span>() {
+  <span class="code-keyword">return</span> <span class="code-string">"Launch it into the world!"</span>;
+}</code></pre>
+    </div>
+
+    <div class="coding-text">
+      <p class="eyebrow">New Coding Area</p>
+      <h2>Build ideas into real projects.</h2>
+      <p>From learning the basics to shipping creative websites, this is where the magic of coding starts.</p>
+      <ul class="coding-list">
+        <li>Design neat interfaces with HTML and CSS</li>
+        <li>Make pages interactive with JavaScript</li>
+        <li>Turn experiments into polished ideas</li>
+      </ul>
+    </div>
+  </section>
 
   <h1 class="colorful">By -Lars</h1>
 
